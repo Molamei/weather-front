@@ -7,7 +7,10 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class NavbarComponent {
   isHomeVisible: boolean = true;
-  isAboutVisible: boolean = true;
+  isLoginVisible: boolean = true;
+  isRegisterVisible: boolean = true;
+  isProfileVisible: boolean = true;
+  isAdminVisible: boolean = true;
 
   constructor(private router: Router) {
     // Subscribe to router events to dynamically update visibility based on the current route
@@ -16,7 +19,10 @@ export class NavbarComponent {
         const currentRoute = event.url;
         // Update visibility properties based on the current route
         this.isHomeVisible = currentRoute !== '/home';
-        // this.isAboutVisible = currentRoute !== '/about';
+        this.isLoginVisible = currentRoute !== '/';
+        this.isRegisterVisible = currentRoute !== '/register';
+        this.isProfileVisible = currentRoute !== '/profile';
+        this.isAdminVisible = currentRoute !== '/admin';
       }
     });
   }

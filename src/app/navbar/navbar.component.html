@@ -15,17 +15,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 pe-5">
           <li class="nav-item">
-            <a class="nav-link active" *ngIf="isHomeVisible" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" *ngIf="isHomeVisible && isLoginVisible && isRegisterVisible" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" *ngIf="isHomeVisible" href="admin">Admin</a>
+            <a class="nav-link" *ngIf="isHomeVisible && isProfileVisible && isAdminVisible" href="admin">Admin</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link"  href="profile">Profile</a>
+            <a class="nav-link" *ngIf="isLoginVisible && isProfileVisible && isRegisterVisible"  href="profile">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  (click)="logout()">Logout</a>
+            <a class="nav-link" *ngIf=" isLoginVisible && isRegisterVisible"  (click)="logout()">Logout</a>
           </li>
           
         </ul>
