@@ -1,0 +1,50 @@
+.text h1{
+    font-size: 16px;
+    line-height: 16px;
+    color: white;
+}
+.text p{
+    font-size: 10px;
+    color: #bfc1c8;
+}
+.navbar{
+    background-color: rgb(30, 32, 43) !important;
+}
+.navbar a{
+    color: white   !important;
+}
+.active{
+    border-radius: 25px     !important;
+    border-color: rgb(3, 144, 201) !important;
+    border-style: solid !important;
+    
+    width: 100px;
+    height: 40px;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    text-align: center;
+    color:rgb(3, 144, 201) !important ;
+
+}
+.nav-item{
+    margin-right: 35px;
+}
+.nav-item a{
+    width: 100px;
+    height: 40px;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 25px     !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+    cursor: pointer;
+}
+.nav-item a:hover{
+    
+    
+    color:rgb(3, 144, 201) !important ;
+    border-color: rgb(3, 144, 201) !important;
+    border-style: solid !important;
+}

@@ -1,0 +1,91 @@
+<div class="info p-5">
+    <div class="container p-5">
+        <div name="inputValue" ngDefaultControl [(ngModel)]="inputValue" (keyup)="getData()" class="search position-relative mb-5">
+            <input type="text" class="w-100 h-100" placeholder="Find your location ... " value="">
+            <button>Find</button>
+        </div>
+        <div class="row gx-0">
+            <div class="col-md-4">
+                <div class="content">
+                    <div class="d-flex today-section px-2">
+                        <div class="day text-light">{{today}}</div>
+                        <div class="date text-light">{{data[0].date}}</div>
+                        
+                    </div>
+                    <div class="resttoday">
+                        <div class="weather">
+                        <h2 class="text-white">{{forecastdata.location.name}}</h2>
+                        <div class="today-weather row">
+                            <div ><h3>{{data[0].day.avgtemp_c}}°C</h3></div>
+                            <img src="http:{{ data[0].day.condition.icon }}" class="" alt="">
+
+                            
+                        </div>
+                        
+                    </div>
+                    <h4>{{data[0].day.condition.text}}</h4>
+                    <div class="icons d-flex">
+                        <h5 class="me-3"> <i class="fa-solid fa-umbrella"></i> {{data[0].day.avghumidity}}%</h5>
+                        <h5 class="me-3"> <i class="fa-solid fa-wind"></i> {{forecastdata.current.wind_kph}}km/h</h5>
+                        <h5 class="me-3"> <i class="fa-solid fa-compass"></i> {{forecastdata.current.wind_dir}}</h5>
+                    </div>
+                </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content">
+                    <div class="tommorrow-section">
+                        <div class="day text-center">{{tomorrow}}</div>
+                        
+                        
+                    </div>
+                    <div class="resttommorrow">
+                        <div class="weather">
+                        
+                        <div class="tommorrow-weather row">
+                            <div ><img  src="http:{{ data[1].day.condition.icon }}" class="" alt=""></div>
+                            <div class="text-white"><h3 id="max-temp">{{data[1].day.maxtemp_c}}°C</h3></div>
+                            <div class=""><h3 id="min-temp">{{data[1].day.mintemp_c}}°C</h3></div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    <h4>{{data[1].day.condition.text}}</h4>
+                    
+                    
+                </div></div>
+                    
+            </div>
+            <div class="col-md-4">
+                <div class="content">
+                    <div class="aftertommorrow-section">
+                        <div class="day text-center">{{dayAfterTomorrow}}</div>
+                        
+                        
+                    </div>
+                    <div class="restaftertommorrow">
+                        <div class="weather">
+                            
+                            <div class="aftertommorrow-weather row">
+                                <div ><img src="http:{{ data[2].day.condition.icon }}" class="" alt=""></div>
+                                
+                                <div class="text-white"><h3 id="max-temp-after">{{data[2].day.maxtemp_c}}°C</h3></div>
+                                <div class=""><h3 id="min-temp-after">{{data[2].day.mintemp_c}}°C</h3></div>
+                                
+                                
+                            </div>
+                            
+                        </div>
+                        <h4>{{data[2].day.condition.text}}</h4>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

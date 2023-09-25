@@ -1,0 +1,78 @@
+.footer{
+    background-color: rgb(38, 41, 54);
+}
+.footer p{
+    color: #bfc1c8;
+    font-size: 14px;
+    line-height: 21px;
+    
+}
+
+.iconss{
+    color:  rgb(0, 154, 216);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(30, 32, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .date{
+    margin-left: auto;
+}
+.weather h2{
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 400;
+    margin-left: 20px;
+    padding-top: 30px;
+}
+.today-weather h3{
+    font-size: 90px;
+    font-weight: 900;
+    color: white;
+    width: 78% !important;
+}
+.today-weather img{
+    width: 20%;
+    display: inline;
+}
+.resttoday h4{
+    color: #009ad8;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.icons{
+    color: rgb(134, 135, 141);
+    font-size: 17px;
+    margin-left: 20px;
+    padding-bottom: 2px;
+}
+.tommorrow-section .day{
+    color: white;
+    margin-left: 60%;
+    transform: translateX(-50%);
+    
+}
+.tommorrow-weather img{
+    width: 14%;
+    margin-left: 48%;
+    transform: translateX(-50%);
+    margin-top: 35px;
+}
+#max-temp{
+    margin-left: 61%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 20px;
+}
+#min-temp{
+    margin-left: 62%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    line-height: 10px;
+    color: #bfc1c8
+
+}

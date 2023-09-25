@@ -1,0 +1,59 @@
+<div class="body">
+
+
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="assets/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Every new friend is a <br> new adventure</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="signup-form">
+                <div class="title">Signup</div>
+              <form action="#">
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="bi" [ngClass]="{'bi-square': !name, 'bi-check-square font': name}"></i>
+                      <input name="name" ngDefaultControl [(ngModel)]="name" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="bi" [ngClass]="{'bi-square': !phone, 'bi-check-square font': phone}"></i>
+                      <input name="phone" ngDefaultControl [(ngModel)]="phone" type="number" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="bi" [ngClass]="{'bi-square': !mail, 'bi-check-square font': mail}"></i>
+                      <input name="mail" ngDefaultControl [(ngModel)]="mail" type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="bi" [ngClass]="{'bi-square': !pass, 'bi-check-square font': pass}"></i>
+                      <input name="pass" ngDefaultControl [(ngModel)]="pass" type="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="bi" [ngClass]="{'bi-square': !check, 'bi-check-square font': check}" ></i>
+                      <input name="passcon" ngDefaultControl [(ngModel)]="passcon" type="password" placeholder="Confirm your password" required (keyup)="checkpass()">
+                    </div>
+                    <div class="button input-box">
+                      <input type="submit" value="Sumbit" (click)="submit()">
+                    </div>
+                    <div class="text sign-up-text">Already have an account? <label for="flip"><a href="/">Login now</a></label></div>
+                  </div>
+            </form>
+          </div>
+        
+    </div>
+    </div>
+  </div>
+</div>

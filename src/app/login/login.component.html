@@ -1,0 +1,40 @@
+<div class="body">
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="assets/frontImg.jpg" alt="">
+        
+      </div>
+      <div class="back">
+        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+        
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">User Login</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input name="mail" ngDefaultControl [(ngModel)]="mail" type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input name="pass" ngDefaultControl [(ngModel)]="pass" type="password" placeholder="Enter your password" required>
+              </div>
+              
+              <div class="button input-box">
+                <input type="submit" value="Sumbit" (click)="login()">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip"><a href="/register">Sigup now</a></label></div>
+            </div>
+        </form>
+      </div>
+        
+    </div>
+    </div>
+  </div>
+</div>

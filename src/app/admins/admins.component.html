@@ -1,0 +1,32 @@
+
+<div class="container mt-4">
+    <h2 class="ms-3">Admins</h2>
+    <div class="card m-5 p-5">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h5 class="card-title">Admins Information</h5>
+          <!-- <a href="#"  class="btn btn-primary"><i class="bi bi-pencil"></i> Edit Profile</a>
+           -->
+        </div>
+        <div *ngIf="!data" class="alert alert-danger p-3 mt-4">No user info</div>
+        <div >
+          <form action="">
+            <label for=""></label>
+            <input name="name" ngDefaultControl [(ngModel)]="name" type="text" class="form-control p-2" placeholder="{{data.name}}">
+            <label for=""></label>
+            <input type="text" class="form-control p-2" placeholder="email" disabled>
+            <label for=""></label>
+            <input name="phone" ngDefaultControl [(ngModel)]="phone" type="text" class="form-control p-2" placeholder="{{data.phone}}">
+            <label for=""></label>
+            <input name="pass" ngDefaultControl [(ngModel)]="pass" type="text" class="form-control p-2" placeholder="write your new password">
+            <div class="btn btn-info p-2 mt-4" (click)="submit()"><i class="bi bi-pencil"></i> Edit</div>
+          
+          </form>
+        </div>
+        <div >
+          <!-- Edit form goes here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
